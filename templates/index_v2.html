@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SARAS AI Institute FAQ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_v2.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-white py-3 shadow-sm">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Logo on the Left -->
+            <div class="d-flex align-items-center">
+                <img src="{{ url_for('static', filename='images/image.svg') }}" alt="SARAS AI Institute" height="50" class="me-3">
+            </div>
+            <!-- Navigation Links in the Center-Right -->
+            <nav class="d-none d-md-flex">
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">Home</a></li>
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">Programs</a></li>
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">Admissions</a></li>
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">About us</a></li>
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">FAQ</a></li>
+                    <li class="mx-3"><a href="#" class="text-dark text-decoration-none">Contact us</a></li>
+                </ul>
+            </nav>
+            <!-- Apply Now Button on the Right -->
+            <a href="#" class="btn btn-light fw-bold text-dark rounded-pill px-4" style="background-color: #EBF877;">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+        <p class="text-center text-muted">Whether you're a prospective student looking for program details, a parent seeking information about our curriculum, or a current student with inquiries about your studies, we're here to help.</p>
+        <div class="input-group mb-3 position-relative">
+            <input type="text" id="searchInput" class="form-control" placeholder="Ask a question..." aria-label="Search">
+            <button id="searchButton" class="btn btn-primary">Search</button>
+            <div id="suggestions" class="list-group position-absolute w-100"></div>
+        </div>
+        <div id="loadingSpinner" class="text-center mt-3 d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div id="results" class="mt-4"></div>
+        <!-- New Search History Section -->
+        <div id="history" class="mt-4"></div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script_v2.js') }}"></script>
+</body>
+</html>
