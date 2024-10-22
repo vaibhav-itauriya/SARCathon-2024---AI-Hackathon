@@ -38,6 +38,3 @@ Access the app at `http://localhost:5000`.
 
 ## License
 Licensed under the MIT License.
-```
-
-This provides a quick overview, installation instructions, and usage details in a compact format.
